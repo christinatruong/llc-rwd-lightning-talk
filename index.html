@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- prev version:
+http://db.tt/4AInBRmn
+https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip 
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ladies Learning Code - Repsonsive Web Design & Tools</title>
+	<meta name="viewport" content="width=device-width">
+
+	<!-- CoderDeck core and extension CSS files -->
+	<link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
+	<link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="src/css/prettify.css">
+	<link rel="stylesheet" href="src/css/deck.coder.css">
+	<link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="src/codemirror/theme/default.css">
+
+	<!-- Custom for LLC -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" > -->
+	<link rel="stylesheet" href="src/css/llc.css" type="text/css" >
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+		function showHint(answerContainerId) {
+			var preTags = document.getElementById(answerContainerId).style.display = "block";
+		}
+	</script>
+</head>
+
+<body class="deck-container">
+	<script type='text/coderdeck' id='coderdeck-default'>
+		<html>
+			<head>
+				<script src='src/jquery.min.js'>SCRIPTEND</head>
+			<body>CODE</body>
+		</html>
+		</script>
+	
+		<script type='text/coderdeck' id='coderdeck-style-example'>
+		<html>
+			<title>test</title>
+			<style>CODE</style>
+			<body>
+				<h1>I'm a H1 heading</h1>
+				<h2>I'm a H2 heading</h2>
+				<p>Pargraph of text &lt;p&gt; here</p>
+				<div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
+				<div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
+			</body>
+		</html>
+	</script>
+	
+
+	<div id="presentation">
+
+		<!-- SLIDE 0: Workshop intro -->
+		<article class='slide slide-title intro'>
+			<img src="assets/ladieslearningcode-125x125.gif">
+			<h1>Lightning Talk:<br>
+			Responsive Design & Tools</h1>
+
+			<img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
+			<h3>Christina Truong</h3>
+			<p>
+				<a href="mailto:hello@christinatruong.com">hello@christinatruong.com<br>
+				<a href="http://christinatruong.com" target="_blank">christinatruong.com</a> //
+				<a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a>
+			</p>
+			<p class="sidenote">Thanks to <a href="http://cykod.github.com/CoderDeck/" target="_blank">CoderDeck</a> for the interactive code slides.</p>
+		</article>
+
+		<!-- SLIDE 1: What is RWD? -->
+		<article class='slide slide-list'>
+			<h2>What is Responsive Web Design?</h2>
+			<blockquote>With the introduction of <a href="http://alistapart.com/article/responsive-web-design">Ethan Marcotte’s responsive web design approach</a>, there’s been a flurry of excitement around the idea that one website could target multiple screens. Fluid websites are nothing new but with the introduction of CSS3 media queries, one site can now adapt gracefully between different resolution sizes and respond accordingly to the context being viewed by the user. Fluid grid designs also allow for a consistent multi-screen experience while maintaining one codebase.</blockquote>
+			<p><a href="http://www.teehanlax.com/blog/no-screen-left-behind-creating-a-digital-experience-for-multiple-devices/">No screen left behind: Creating a digital experience for multiple devices</a> - Christina Truong</p>
+		</article>
+
+		<!-- SLIDE 2: What is RWD? (cont)-->
+		<article class='slide slide-list'>
+			<h2>What is Responsive Web Design?</h2>
+			<ul>
+				<li>Aims to provide the best experience for any device size.</li>
+				<li><strong>One</strong> website that reacts to its viewport (the size of the viewing area).</li>
+				<li>Adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images.</li>
+				<li>Page components are rearranged based on device size as well as device-based user behaviours.</li>
+			</ul>
+		</article>
+
+		<!-- SLIDE 3: RWD vs Mobile Web Sites -->
+		<article class='slide slide-list'>
+			<h2>Responsive vs Mobile Web</h2>
+
+			<p>You may have seen a website redirect from <strong>yoursite.com</strong> to <strong>m.yoursite.com</strong> when viewed on a phone or tablet.  That's because they are two <em>separate</em> sites. One for desktop and one for mobile.</p>
+
+			<p>Let's take a look at an example of a mobile &amp; desktop site, <a href="http://flickr.com">flickr.com</a> and <a href="http://m.flickr.com">m.flickr.com</a>.</p>
+
+			<p>Responsive web design is not the magic solution but it is a great alternative to creating a separate desktop and mobile site.</p>
+
+			<p><a href="http://mediaqueri.es">mediaqueri.es</a> houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.</p>
+		</article>
+
+		<!-- SLIDE 4: RWD vs Fluid -->
+		<article class='slide slide-list'>
+			<h2>Responsive vs Fluid</h2>
+
+			<p>Fluid designs are created by using percentage widths, therefore becoming <em>relative</em> to the size of the viewport.</p>
+
+			<p>Fluid designs create a more flexible layout and generally works well in a desktop context but begins to not function as well when going into smaller resolutions.</p>
+
+			<p><a href="http://www.alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html">A List Apart - Flexible design example</a><br />
+			<a href="http://www.alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html">A List Apart - Responsive design example</a><br />
+			<a href="http://www.alistapart.com/articles/responsive-web-design/">A List Apart - Full article</a></p>
+		</article>
+
+		<!-- SLIDE 5: Responsive Techniques -->
+		<article class='slide slide-subhead'>
+			<h1>Responsive Techniques</h1>
+			<p>Media Queries, Breakpoints and Tools</p>
+		</article>
+
+		<!-- SLIDE 6: Media Queries -->
+		<article class='slide slide-list'>
+			<h2>Media Queries</h2>
+			<p>Media Queries are the key to making a site responsive. It is used to apply CSS <strong>only when the screen has reached a certain size</strong>.</p>
+			<p>Lets take a look at a basic media query:</p>
+<pre><code>@media screen and (max-width: 480px) {
+
+    body {
+        background: red;
+    }
+
+}
+</code></pre>
+			<p>According to the above condition, any screen equal to or less than 480px wide resolution will have a red background.</p>
+		</article>
+
+
+		<!-- SLIDE 7: Media Queries (cont) -->
+		<article class='slide slide-list'>
+			<h2>Media Queries</h2>
+			<p>Notice how we <strong>nested</strong> our CSS inside the media query? If we had more than one rule it would look like this:</p>
+
+<pre><code>@media (max-width: 480px) {
+
+    body {
+        background: red;
+    }
+    h2 {
+        font-size: 20px;
+    }
+
+}
+</code></pre>
+
+			<p>The above CSS gets applied when the browser reaches a width of 480px or smaller. This is what we call a <strong> <em>breakpoint</em> </strong>.</p>
+		</article>
+
+		<!-- SLIDE 8: Common Break Points -->
+		<article class='slide slide-list'>
+			<h2>Common Break Points</h2>
+			<ul>
+				<li>320px & 480px — Mobile portrait & landscape</li>
+				<li>600px — Small tablet</li>
+				<li>768px — Tablet portrait</li>
+				<li>940px - 1024px — Tablet landscape, netbook, small desktop</li>
+				<li>1280px &amp; greater — Desktop</li>
+			</ul>
+
+			<p>These are just general guidelines. Depending on the project, you may need to target different resolutions and add media queries at different breakpoints.</p>
+			<p>A good rule of thumb is to have at least have 3 breakpoints to optimize for phones, tablets and desktops/laptops. On the flip side, avoid using too many media queries as well!</p>
+		</article>
+
+		<!-- SLIDE 9: Viewport Meta Tag  -->
+		<article class='slide slide-list'>
+			<h2>Don't Forget the Viewport Meta Tag!</h2>
+
+			<p>The <em>viewport meta tag</em> is <strong>required</strong> and is included in the <code>&lt;head&gt;</code> to ensure that the page responds on mobile devices.</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</code></pre>
+
+			<ul>
+				<li><strong>meta</strong> - Tag name. Goes in the <code>&lt;head&gt;</code>.</li>
+				<li><strong>name="viewport"</strong> - Used to tell the browser information about the sizing abilities of the site.</li>
+				<li><strong>content</strong> - Provides information about the viewport. Single or multiple <em>key=value pairs</em> are added as needed here, each comma separated.</li>
+				<li><strong>width=device-width</strong> - Tells the browser how wide the website should be.
+				</li>
+				<li><strong>initial-scale</strong> - Is the value at which the site is zoomed in/out by default.
+				</li>
+			</ul>
+		</article>
+
+		<!-- SLIDE 10: Viewport Meta Tag (extras) -->
+		<article class='slide slide-list'>
+			<h2>More Viewport Options</h2>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1"&gt;
+</code></pre>
+			<ul>
+				<li><strong>user-scalable=no</strong> - Limit users from being able to zoom into your website.</li>
+				<li><strong>minimum-scale, maximum-scale</strong> - Limits how far the user can scale/zoom.</li>
+			</ul>
+			<p>Note that for accessibility reasons, these options should be avoided when possible.</p>
+			<p><strong>Resource</strong>: <a href="http://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972">Quick Tip: Don't Forget the Viewport Meta Tag</a></p>
+		</article>
+
+		<!-- SLIDE 11: Dev Tools  -->
+		<article class='slide slide-list'>
+			<h2>Chrome Developer Tools</h2>
+
+			<p>Developer tools allow us to <em>inspect</em> any web page and see the code.<br> These tools make it easier to test and debug code as well as allow us to experiment with elements on the page without touching the actual source files.  It can be accessed in 3 ways:</p>
+
+			<ul>
+				<li>right-click on a web page and select <strong>Inspect Element</strong> OR</li>
+				<li>select the menu icon <img src="http://cl.ly/image/0F1h3c0p1J0k/menu-icon.png" alt="" style="display: inline-block;margin: 0 4px;"> in the top right hand corner of the Chrome browser and select <strong>Tools</strong> > <strong>Developer Tools</strong> OR</li>
+				<li>keyboard shortcut: <strong>Cmnd + Option + I</strong> (Mac) / <strong>Ctrl + Shift + I</strong> (PC)</li>
+			</ul>
+
+			<p>Extra resource: <a href="https://developer.chrome.com/devtools/index">Chrome Developer Tools</a></p>
+		</article>
+
+		<!-- SLIDE 12: Testing in the Browser -->
+		<article class='slide slide-list'>
+			<h2>Testing Mobile in the Browser</h2>
+
+			<p>When creating mobile friendly sites, it's always best to test on an actual device. However, there are a lot of interesting tools available for testing in the browser. Today we will look at the <a href="http://lab.maltewassermann.com/viewport-resizer/">Viewport Resizer Responsive Design Bookmarklet</a>:</p>
+
+			<ol>
+				<li><p>Go to Chrome and select <strong>View</strong> > <strong> Always Show Bookmark Bar </strong><br/>
+				<img src="assets/bookmark-bar.png" style="margin: 10px 0;"></p></li>
+				<li><p>Your bookmark bar should now appear under the address bar.<br/>
+				<img src="assets/bookmark-bar-added.png" style="margin: 10px 0;"></p></li>
+				<li><p>Go to <a href="http://lab.maltewassermann.com/viewport-resizer/">Viewport Resizer
+				Responsive Design Bookmarklet</a> and add this bookmarklet to your bookmarks bar by clicking the button once, hold and drag it to your bookmarks bar.<br/>
+				<img src="assets/bookmarklet.png" style="margin: 10px 0;"></p></li>
+			</ol>
+			<p>You should now see the Resizr bookmarklet in you toolbar.</p>
+		</article>
+
+		<!-- SLIDE 13: Additional Resources -->
+		<article class='slide slide-list'>
+			<h2>Additional Resources</h2>
+			<ul>
+				<li><a href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design/">Shay Howe - Responsive Web Design</a></li>
+				<li><a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design">Treehouse - Beginner’s Guide to Responsive Web Design</a></li>
+				<li><a href="http://webdesignerwall.com/tutorials/responsive-design-in-3-steps">Web Designer Wall - Responsive Design in 3 Steps</a></li>
+				<li><a href="http://services.google.com/fh/files/misc/multiscreenworld_final.pdf">Google - The New Multi-screen World: Understanding Cross-platform Consumer Behavior</a></li>
+			</ul>
+		</article>
+
+		<article class='slide slide-subhead'>
+			<h1>Thank you!</h1>
+		</article>
+
+  
+	</div><!-- END div id=presentation -->
+
+	<div class="instructions">(Use the left and right arrow keys on your keyboard to navigate.)</div><!-- TODO: add arrow icons -->
+
+	<script src='src/jquery.min.js'></script>
+	<script src="src/modernizr.js"></script>
+
+	<!-- Update these paths to point to the correct files. -->
+	<script src="src/jquery.tmpl.min.js"></script>
+	<script src="src/deck.js/core/deck.core.js"></script>
+
+	<!-- Code Mirror -->
+	<script src="src/codemirror/lib/codemirror.js"></script>
+	<script src="src/codemirror/mode/xml/xml.js"></script>
+	<script src="src/codemirror/mode/css/css.js"></script>
+	<script src="src/codemirror/mode/javascript/javascript.js"></script>
+	<script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+	<!-- Prettify -->
+	<script src="src/prettify.js"></script>
+	<script src="src/lang-css.js"></script>
+
+	<!-- Deck Core and extensions -->
+	<script src="src/deck.js/extensions/status/deck.status.js"></script>
+	<script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
+	<script src='src/deck.coder.js'></script>
+	<script src="src/deck.js/extensions/hash/deck.hash.js"></script>
+	<script src="src/deck.js/extensions/menu/deck.menu.js"></script>
+	<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-246174-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	function trackQuality(feedback){
+
+		//the higher the value over time,
+		//the more the page should be tweaked since it's not understandable
+		var feedbackValue;
+		switch(feedback) {
+			case 'no':
+				feedbackValue = 2;
+				break;
+			case 'sortof':
+				feedbackValue = 1;
+				break;
+			default:
+				feedbackValue = 0;
+		}
+
+		if (_gaq) {
+			_gaq.push(['_trackEvent', "LLC HTML/CSS (Ottawa)", feedback, returnDocumentName(), feedbackValue, true]);
+			var feedbackDiv = document.getElementById('page_feedback');
+			feedbackDiv.innerHTML = "Thanks!";
+		}else{
+			console.log('_gaq is not defined');
+		}
+	}
+
+	function returnDocumentName() {
+		var fileName = document.location.href;
+		var end = (fileName.indexOf("?") == -1) ? fileName.length : fileName.indexOf("?");
+		return fileName.substring(fileName.lastIndexOf("/")+1, end);
+	}
+
+</script>
+
+<!-- <div id="page_feedback">
+	<strong>Help improve the quality of this workshop!</strong>
+	Did this page explain everything well?
+		<a href="#" onClick="trackQuality('yes');return false;" class="button">Yes</a>
+		<a href="#" onClick="trackQuality('sortof');return false;" class="button">Sort of</a>
+		<a href="#" onClick="trackQuality('no');return false;" class="button">No</a>
+</div> -->
+</body>
+</html>
